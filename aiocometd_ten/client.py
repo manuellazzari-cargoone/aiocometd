@@ -10,15 +10,15 @@ from types import TracebackType
 
 import aiohttp
 
-from aiocometd.transports import create_transport
-from aiocometd.transports.abc import Transport
-from aiocometd.constants import DEFAULT_CONNECTION_TYPE, ConnectionType, \
+from .transports import create_transport
+from .transports.abc import Transport
+from .constants import DEFAULT_CONNECTION_TYPE, ConnectionType, \
     MetaChannel, SERVICE_CHANNEL_PREFIX, TransportState
-from aiocometd.exceptions import ServerError, ClientInvalidOperation, \
+from .exceptions import ServerError, ClientInvalidOperation, \
     TransportTimeoutError, ClientError
-from aiocometd.utils import is_server_error_message
-from aiocometd.extensions import Extension, AuthExtension
-from aiocometd.typing import ConnectionTypeSpec, SSLValidationMode, \
+from .utils import is_server_error_message
+from .extensions import Extension, AuthExtension
+from .typing import ConnectionTypeSpec, SSLValidationMode, \
     JsonObject, JsonDumper, JsonLoader
 
 
@@ -386,7 +386,7 @@ class Client:  # pylint: disable=too-many-instance-attributes
 
     def _verify_response(self, response: JsonObject) -> None:
         """Check the ``successful`` status of the *response* and raise \
-        the appropriate :obj:`~aiocometd.exceptions.ServerError` if it's False
+        the appropriate :obj:`~aiocometd_ten.exceptions.ServerError` if it's False
 
         If the *response* has no ``successful`` field, it's considered to be
         successful.
@@ -398,7 +398,7 @@ class Client:  # pylint: disable=too-many-instance-attributes
             self._raise_server_error(response)
 
     def _raise_server_error(self, response: JsonObject) -> None:
-        """Raise the appropriate :obj:`~aiocometd.exceptions.ServerError` for \
+        """Raise the appropriate :obj:`~aiocometd_ten.exceptions.ServerError` for \
         the failed *response*
 
         :param response: Response message

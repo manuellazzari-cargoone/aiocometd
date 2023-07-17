@@ -8,16 +8,16 @@ from typing import Union, Optional, List, Set, Awaitable, Any
 
 import aiohttp
 
-from aiocometd.constants import ConnectionType, MetaChannel, TransportState, \
+from ..constants import ConnectionType, MetaChannel, TransportState, \
     HANDSHAKE_MESSAGE, CONNECT_MESSAGE, DISCONNECT_MESSAGE, \
     SUBSCRIBE_MESSAGE, UNSUBSCRIBE_MESSAGE, PUBLISH_MESSAGE
-from aiocometd.utils import defer, is_matching_response, \
+from ..utils import defer, is_matching_response, \
     is_auth_error_message, is_event_message
-from aiocometd.exceptions import TransportInvalidOperation, TransportError
-from aiocometd.typing import SSLValidationMode, JsonObject, JsonLoader, \
+from ..exceptions import TransportInvalidOperation, TransportError
+from ..typing import SSLValidationMode, JsonObject, JsonLoader, \
     JsonDumper, Headers, Payload
-from aiocometd.extensions import Extension, AuthExtension
-from aiocometd.transports.abc import Transport
+from ..extensions import Extension, AuthExtension
+from .abc import Transport
 
 
 LOGGER = logging.getLogger(__name__)

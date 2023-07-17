@@ -13,7 +13,7 @@ Exception hierarchy::
 """
 from typing import Optional, List, cast
 
-from aiocometd import utils
+from .utils import JsonObject, get_error_code, get_error_message, get_error_args
 
 
 class AiocometdException(Exception):
@@ -43,7 +43,7 @@ class TransportConnectionClosed(TransportError):
 class ServerError(AiocometdException):
     """CometD server side error"""
     # pylint: disable=useless-super-delegation
-    def __init__(self, message: str, response: Optional[utils.JsonObject]) \
+    def __init__(self, message: str, response: Optional[JsonObject]) \
             -> None:
         """If the *response* contains an error field it gets parsed
         according to the \
@@ -64,9 +64,9 @@ class ServerError(AiocometdException):
         # pylint: enable=unsubscriptable-object
 
     @property
-    def response(self) -> Optional[utils.JsonObject]:
+    def response(self) -> Optional[JsonObject]:
         """Server response message"""
-        return cast(Optional[utils.JsonObject],
+        return cast(Optional[JsonObject],
                     self.args[1])  # pylint: disable=unsubscriptable-object
 
     @property
@@ -81,21 +81,21 @@ class ServerError(AiocometdException):
         """Error code part of the error code part of the `error\
         <https://docs.cometd.org/current/reference/#_code_error_code>`_, \
         message field"""
-        return utils.get_error_code(self.error)
+        return get_error_code(self.error)
 
     @property
     def error_message(self) -> Optional[str]:
         """Description part of the `error\
         <https://docs.cometd.org/current/reference/#_code_error_code>`_, \
         message field"""
-        return utils.get_error_message(self.error)
+        return get_error_message(self.error)
 
     @property
     def error_args(self) -> Optional[List[str]]:
         """Arguments part of the `error\
         <https://docs.cometd.org/current/reference/#_code_error_code>`_, \
         message field"""
-        return utils.get_error_args(self.error)
+        return get_error_args(self.error)
 
 
 class ClientError(AiocometdException):

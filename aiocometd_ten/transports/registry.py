@@ -1,9 +1,9 @@
 """Functions for transport class registration and instantiation"""
 from typing import Type, Callable, Any
 
-from aiocometd.exceptions import TransportInvalidOperation
-from aiocometd.constants import ConnectionType
-from aiocometd.transports.abc import Transport
+from ..exceptions import TransportInvalidOperation
+from ..constants import ConnectionType
+from .abc import Transport
 
 
 TRANSPORT_CLASSES = {}

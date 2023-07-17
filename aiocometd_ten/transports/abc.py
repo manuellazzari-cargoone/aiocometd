@@ -2,8 +2,8 @@
 from abc import ABC, abstractmethod
 from typing import Set, Optional, List
 
-from aiocometd.constants import ConnectionType, TransportState
-from aiocometd.typing import JsonObject
+from ..constants import ConnectionType, TransportState
+from ..typing import JsonObject
 
 
 class Transport(ABC):
