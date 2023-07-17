@@ -1,0 +1,31 @@
+[project]
+name = "aiocometd-3.10"
+description = "A CometD client, updated for Python 3.10"
+readme = "README.md"
+version = "0.4.8"
+authors = [
+    { name = "Robert Marki", email = "gsmiko@gmail.com" }, 
+    { name = "Kieran Lock", email = "kieran.lock@outlook.com" }
+]
+keywords = ["gui", "framework", "xterm", "zero-dependency", "terminal-based"]
+classifiers = [
+    "Development Status :: 3 - Alpha", 
+    "License :: OSI Approved :: MIT License)", 
+    "Programming Language :: Python :: 3.10", 
+    "Intended Audience :: Developers"
+]
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+dependencies = [
+    "aiohttp>=3.1,<4.0",
+    'importlib-metadata; python_version<"3.10"',
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project.urls]
+GitHub = "https://github.com/Kieran-Lock/aiocometd-3.10"
+Documentation = "https://aiocometd.readthedocs.io/en/latest/"
+License = "https://github.com/Kieran-Lock/aiocometd-3.10/blob/main/LICENSE"
