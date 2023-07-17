@@ -7,7 +7,7 @@ authors = [
     { name = "Robert Marki", email = "gsmiko@gmail.com" }, 
     { name = "Kieran Lock", email = "kieran.lock@outlook.com" }
 ]
-keywords = ["gui", "framework", "xterm", "zero-dependency", "terminal-based"]
+keywords = ["python", "streaming", "comet", "aiohttp", "asyncio", "cometd", "bayeux", "push"]
 classifiers = [
     "Development Status :: 3 - Alpha", 
     "License :: OSI Approved :: MIT License)", 
