@@ -2,7 +2,7 @@
 name = "aiocometd-noloop"
 description = "A CometD client, updated for Python 3.10"
 readme = "README.md"
-version = "0.4.8"
+version = "0.4.9"
 authors = [
     { name = "Robert Marki", email = "gsmiko@gmail.com" }, 
     { name = "Kieran Lock", email = "kieran.lock@outlook.com" }
