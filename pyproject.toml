@@ -1,5 +1,5 @@
 [project]
-name = "aiocometd-3.10"
+name = "aiocometd-noloop"
 description = "A CometD client, updated for Python 3.10"
 readme = "README.md"
 version = "0.4.8"
@@ -26,6 +26,6 @@ requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project.urls]
-GitHub = "https://github.com/Kieran-Lock/aiocometd-3.10"
+GitHub = "https://github.com/Kieran-Lock/aiocometd-noloop"
 Documentation = "https://aiocometd.readthedocs.io/en/latest/"
-License = "https://github.com/Kieran-Lock/aiocometd-3.10/blob/main/LICENSE"
+License = "https://github.com/Kieran-Lock/aiocometd-noloop/blob/main/LICENSE"
