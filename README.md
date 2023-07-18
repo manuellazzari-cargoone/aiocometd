@@ -10,12 +10,12 @@
   <p align="center">
     A CometD client, updated for Python 3.10
     <br />
-    <a href="aiocometd.readthedocs.io/"><strong>Explore the docs »</strong></a>
+    <a href="https://aiocometd.readthedocs.io/"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="#getting-started">Getting Started</a>
     ·
-    <a href="aiocometd.readthedocs.io/">Documentation</a>
+    <a href="https://aiocometd.readthedocs.io/">Documentation</a>
     ·
     <a href="https://github.com/Kieran-Lock/aiocometd-noloop/blob/main/LICENSE">License</a>
   </p>
